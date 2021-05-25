@@ -3,8 +3,10 @@ import { connect } from "react-redux";
 
 import { getRandomJoke } from "../actions";
 
-const Jokes = ({ quote, isFetching, error, ...props }) => {
-  useEffect(() => {});
+const Jokes = ({ joke, isFetching, error, ...props }) => {
+  useEffect(() => {
+    getRandomJoke();
+  }, []);
 
   if (error) {
     return <h2>Error: {error}</h2>;
@@ -25,10 +27,10 @@ const Jokes = ({ quote, isFetching, error, ...props }) => {
 
 const mapStateToProps = (state) => {
   return {
-    quote: state.quote,
+    joke: state.joke,
     isFetching: state.isFetching,
     error: state.error,
   };
 };
 
-export default connect(mapStateToProps, { getRandomJoek })(Jokes);
+export default connect(mapStateToProps, { getRandomJoke })(Jokes);

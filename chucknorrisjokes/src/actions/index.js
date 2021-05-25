@@ -12,9 +12,9 @@ export const getRandomJoke = () => (dispatch) => {
   axios
     .get("http://api.icndb.com/jokes/random")
     .then((res) => {
-      console.log("pv: getRandomJoke; get-then; res.data: ", res.data);
+      //console.log("pv: getRandomJoke; get-then; res.data: ", res.data.value);
 
-      //dispatch({type: FETCH_JOKE_SUCCESS, payload: res.data})
+      dispatch({ type: FETCH_JOKE_SUCCESS, payload: res.data.value });
     })
     .catch((err) => {
       dispatch({ type: FETCH_JOKE_FAILURE, payload: JSON.stringify(err) });
