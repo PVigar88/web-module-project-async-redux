@@ -17,11 +17,14 @@ const Jokes = ({ joke, isFetching, error, ...props }) => {
   }
 
   return (
-    <>
-      <h2>Joke # {joke.id}</h2>
-      <h2>{joke.joke}</h2>
+    <div className="jokeContainer">
+      <div className="jokePane">
+        <h2>Joke # {joke.id}</h2>
+        <h2>{joke.joke}</h2>
+      </div>
+      <br />
       <button onClick={() => props.getRandomJoke()}>Next Random Joke</button>
-    </>
+    </div>
   );
 };
 
