@@ -4,9 +4,10 @@ import { connect } from "react-redux";
 import { getRandomJoke } from "../actions";
 
 const Jokes = ({ joke, isFetching, error, ...props }) => {
-  useEffect((props) => {
-    props.getRandomJoke();
-  }, []);
+  const getRandomJoke = props.getRandomJoke;
+  useEffect(() => {
+    getRandomJoke();
+  }, [getRandomJoke]);
 
   if (error) {
     return <h2>Error: {error}</h2>;
