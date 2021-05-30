@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { getRandomJoke } from "../actions";
 
 const Jokes = ({ joke, isFetching, error, ...props }) => {
-  useEffect(() => {
+  useEffect((props) => {
     props.getRandomJoke();
   }, []);
 
