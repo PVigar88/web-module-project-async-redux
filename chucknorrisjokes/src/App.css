@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap");
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: "Stint Ultra Condensed", cursive;
+}
+body {
+  background-color: cornflowerblue;
+}
+h1 {
+  font-size: 2.5em;
+}
+
+.jokePane {
+  border: black 5px dotted;
+  width: 85%;
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 15px;
+  background-image: url("https://wallpaperaccess.com/full/1614311.jpg");
+  background-color: #c09e64;
+  font-size: 2.5em;
+  color: white;
+  /* -webkit-text-stroke: 0.5px black; */
+}
+.jokeContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 18%;
+  padding-bottom: 15px;
+}
+button {
+  border: none;
+  background-color: darkslategrey;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 7%;
+  margin: 10px;
+}
