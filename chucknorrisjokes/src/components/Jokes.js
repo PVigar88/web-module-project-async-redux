@@ -5,7 +5,7 @@ import { getRandomJoke } from "../actions";
 
 const Jokes = ({ joke, isFetching, error, ...props }) => {
   useEffect(() => {
-    getRandomJoke();
+    props.getRandomJoke();
   }, []);
 
   if (error) {
