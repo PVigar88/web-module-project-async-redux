@@ -10,7 +10,7 @@ export const getRandomJoke = () => (dispatch) => {
   dispatch({ type: SET_FETCHING_JOKE });
 
   axios
-    .get("http://api.icndb.com/jokes/random")
+    .get("https://api.icndb.com/jokes/random")
     .then((res) => {
       //console.log("pv: getRandomJoke; get-then; res.data: ", res.data.value);
 
